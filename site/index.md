@@ -4,6 +4,8 @@
 
 Pythia Cookbooks provide example workflows on more advanced and domain-specific problems developed by the Pythia community. Cookbooks build on top of skills you learn in Pythia Foundations.
 
+Interested in contributing a new Cookbook or contributing to an existing Cookbook? Great! Please see the [Project Pythia Contributor's Guide](https://projectpythia.org/contributing.html) and Cookbook-specific information [here](https://github.com/ProjectPythiaCookbooks/.github/blob/main/CONTRIBUTING.md).
+
 <div class="d-sm-flex mt-3 mb-4">
 <div class="d-flex gallery-menu">
 <div><a role="button" class="btn btn-primary btn-sm mx-1" href=https://github.com/ProjectPythiaCookbooks/projectpythiacookbooks.github.io/issues/new?assignees=&labels=content&template=update-cookbook-gallery.md&title=Update+Gallery+with+new+Cookbook>Submit a new Cookbook</a></div>
