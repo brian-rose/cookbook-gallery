@@ -100,11 +100,11 @@ jobs:
               data = json.load(f)
 
           with open(cookbook_gallery_file) as f:
-              cookbook_gallery = yaml.load(f)
+              cookbook_gallery = f.readlines()
 
           with open(cookbook_gallery_file, 'w') as f:
-              cookbook_gallery.append(data)
-              yaml.dump(cookbook-gallery, f)
+              cookbook_gallery.append(data['repo'])
+              f.writelines(cookbook-gallery)
 
       - name: Run pre-commit hooks
         run: |
