@@ -2,9 +2,7 @@ import json
 import os
 import typing
 
-import frontmatter
 import pydantic
-from markdown_it import MarkdownIt
 
 
 class Submission(pydantic.BaseModel):
@@ -26,13 +24,6 @@ class IssueInfo:
         self._create_submission_input()
         return self
 
-    def _get_inputs(self):
-        text = self.data['issue']['body']       
-        start = "### Root Repository Name\n\n"
-        end = "\n\n###"
-        repo = text[text.index(left)+len(left):text.index(right)])
-        self.repo = f'  - {repo}'
-
     def _create_submission_input(self):
         md = MarkdownIt()
         inputs = None
@@ -40,7 +31,13 @@ class IssueInfo:
             if token.tag == 'code':
                 inputs = frontmatter.loads(token.content).metadata
                 break
-        repo = inputs.get('repo-root-name')
+                text = self.data['issue']['body']       
+        
+        start = "### Root Repository Name\n\n"
+        end = "\n\n###"
+        repo = text[text.index(left)+len(left):text.index(right)])
+        repo = f'  - {repo}'
+        
         self.submission = Submission(repo=repo)
 
 
