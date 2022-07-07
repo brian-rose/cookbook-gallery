@@ -36,6 +36,6 @@ class IssueInfo:
 if __name__ == '__main__':
 
     issue = IssueInfo(gh_event_path=os.environ['GITHUB_EVENT_PATH']).create_submission()
-    inputs = issue.submission.dict()
-    with open('cookbook-gallery-submission-input.json', 'w') as f:
-        json.dump(inputs, f)
+    input = issue.submission.dict()
+    with open('cookbook-submission-input.txt', 'w') as f:
+        f.write(input['repo'])
