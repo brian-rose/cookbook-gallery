@@ -27,7 +27,11 @@ class IssueInfo:
         return self
 
     def _get_inputs(self):
-        self.repo = self.data['repo-root-name']
+        text = self.data['issue']['body']       
+        start = "### Root Repository Name\n\n"
+        end = "\n\n###"
+        repo = text[text.index(left)+len(left):text.index(right)])
+        self.repo = f'  - {repo}'
 
     def _create_submission_input(self):
         md = MarkdownIt()
