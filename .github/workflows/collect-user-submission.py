@@ -20,19 +20,12 @@ class IssueInfo:
         print(self.data)
 
     def create_submission(self):
-        self._get_inputs()
         self._create_submission_input()
         return self
 
     def _create_submission_input(self):
-        md = MarkdownIt()
-        inputs = None
-        for token in md.parse(self.body):
-            if token.tag == 'code':
-                inputs = frontmatter.loads(token.content).metadata
-                break
-                text = self.data['issue']['body']       
-        
+        text = self.data['issue']['body'] 
+
         start = "### Root Repository Name\n\n"
         end = "\n\n###"
         repo = text[text.index(left)+len(left):text.index(right)])
