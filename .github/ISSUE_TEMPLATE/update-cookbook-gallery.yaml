@@ -17,7 +17,7 @@ labels: 'cookbook-gallery-submission'
 <!-- Please fill out the template below by replacing `repo-root-name` with the root name of your Cookbook repository in between the square brackets ([]). -->
 
 ---
-'  - [repo-root-name]'
+  - 'repo-root-name'
 ---
 ```
 
