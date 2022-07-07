@@ -26,10 +26,9 @@ class IssueInfo:
     def _create_submission_input(self):
         text = self.data['issue']['body'] 
 
-        left = "### Root Repository Name\n\n"
-        right = "\n\n###"
-        repo = text[text.index(left)+len(left):text.index(right)]
-        repo = f'  - {repo.strip()}'
+        left = "### Root Repository Name"
+        right = "###"
+        repo = text[text.index(left)+len(left):text.index(right)].strip()
         
         self.submission = Submission(repo=repo)
 
