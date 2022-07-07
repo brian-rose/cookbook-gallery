@@ -28,7 +28,7 @@ class IssueInfo:
 
         left = "### Root Repository Name\n\n"
         right = "\n\n###"
-        repo = text[text.index(left)+len(left):text.index(right)])
+        repo = text[text.index(left)+len(left):text.index(right)]
         repo = f'  - {repo.strip()}'
         
         self.submission = Submission(repo=repo)
