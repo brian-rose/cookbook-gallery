@@ -1,25 +1,27 @@
----
 name: Update Cookbook Gallery
 about: For submitting a new Cookbook repository for acceptance into the gallery
 title: Update Gallery with new Cookbook
-labels: content, cookbook-gallery-submission
-assignees: ''
+labels: ['content', 'cookbook-gallery-submission']
+assignees: '@ProjectPythiaCookbooks/education'
 
----
-
----
-name: Update cookbook gallery
-about: Update cookbook gallery
-title: ''
-labels: 'cookbook-gallery-submission'
----
-
-<!-- Please submit your Cookbook to the Pythia Cookbook gallery by filling out the template below. Ask yourself if your contribution would be better suited as an addition to an existing Cookbook, before generating a new one. -->
-<!-- Please fill out the template below by replacing `repo-root-name` with the root name of your Cookbook repository. -->
-
----
-  - repo-root-name
----
-```
-
-<!-- Feel free to add comments below this line -->
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your contribution to the Project Pythia Cookbook Gallery! 
+  - type: input
+    id: contact
+    attributes:
+      label: Root Repository Name
+      description: Please fill out the template with the root name of your Cookbook repository.
+      placeholder: ex. repo-root-name
+    validations:
+      required: true
+ - type: dropdown
+    id: check-existing
+    attributes:
+      label: Did you check if your contribution would be better suited as an addition to an existing Cookbook, before generating a new one?
+      multiple: true
+      options:
+        - yes
+        - no        
