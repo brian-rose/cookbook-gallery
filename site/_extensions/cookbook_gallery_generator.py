@@ -10,7 +10,7 @@ def main(app):
     repo_dicts = generate_repo_dicts(all_items)
 
     title = 'Cookbooks Gallery'
-    subtext = 'Pythia Cookbooks provide example workflows on more advanced and domain-specific problems developed by the Pythia community. Cookbooks build on top of skills you learn in Pythia Foundations.'
+    subtext = "Pythia Cookbooks provide example workflows on more advanced and domain-specific problems developed by the Pythia community. Cookbooks build on top of skills you learn in Pythia Foundations. \n Interested in contributing a new Cookbook or contributing to an existing Cookbook? Great! Please see the [Project Pythia Contributor's Guide](https://projectpythia.org/contributing.html) and Cookbook-specific information [here](https://github.com/ProjectPythiaCookbooks/.github/blob/main/CONTRIBUTING.md)."
     
     submit_btn_link = 'https://github.com/ProjectPythiaCookbooks/projectpythiacookbooks.github.io/issues/new?assignees=&labels=content&template=update-cookbook-gallery.md&title=Update+Gallery+with+new+Cookbook'
     submit_btn_txt = 'Submit a new Cookbook'
