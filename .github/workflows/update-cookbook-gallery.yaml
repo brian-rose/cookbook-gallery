@@ -94,15 +94,15 @@ jobs:
 
           yaml = YAML()
           submission_file = 'cookbook-submission-input.txt'
-          cookbook_gallery_file = 'site/cookbook_gallery.yaml'
+          cookbook_gallery_file = 'site/cookbook_gallery.txt'
           with open(submission_file) as f:
-              data = read(f.strip())
+              repo = f.read().strip()
 
           with open(cookbook_gallery_file) as f:
               cookbook_gallery = f.readlines()
 
           with open(cookbook_gallery_file, 'w') as f:
-              cookbook_gallery.append(data['repo'])
+              cookbook_gallery.append(repo)
               f.writelines(cookbook-gallery)
 
       - name: Run pre-commit hooks
