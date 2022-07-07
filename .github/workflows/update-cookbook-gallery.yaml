@@ -59,7 +59,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: submission
-          path: cookbook-gallery-submission-input.json
+          path: cookbook-submission-input.txt
 
   create-pull-request:
     needs: validate-user-submission
@@ -90,14 +90,13 @@ jobs:
       - name: Update cookbook gallery
         shell: python
         run: |
-          import json
           from ruamel.yaml import YAML
 
           yaml = YAML()
-          submission_file = 'cookbook-gallery-submission-input.json'
+          submission_file = 'cookbook-submission-input.txt'
           cookbook_gallery_file = 'site/cookbook_gallery.yaml'
           with open(submission_file) as f:
-              data = json.load(f)
+              data = read(f.strip())
 
           with open(cookbook_gallery_file) as f:
               cookbook_gallery = f.readlines()
